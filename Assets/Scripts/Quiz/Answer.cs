@@ -8,10 +8,10 @@ public class Answer : MonoBehaviour
 
     public Color startColor;
 
-    private void Start()
-    {
-        startColor = GetComponent<Image>().color;
-    }
+    //private void Start()
+    //{
+    //    startColor = GetComponent<Image>().color;
+    //}
 
     public void AnswerCheck()
     {
@@ -23,7 +23,7 @@ public class Answer : MonoBehaviour
         else
         {
             GetComponent<Image>().color = Color.red;
-            quizManager.Wrong();
+            //quizManager.Wrong();
         }
     }
 }

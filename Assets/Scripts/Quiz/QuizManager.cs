@@ -16,12 +16,14 @@ public class QuizManager : MonoBehaviour
     public TextMeshProUGUI questionText;
     public TextMeshProUGUI scoreText;
 
-    private int totalQuestions = 0;
-    private int score;
+    public static bool quizComplete = false;
+
+    //private int totalQuestions = 0;
+    //private int score;
 
     private void Start()
     {
-        totalQuestions = questionAndAnswers.Count;
+        //totalQuestions = questionAndAnswers.Count;
         GameOverPanel.SetActive(false);
         GenerateQuestion();
     }
@@ -30,21 +32,21 @@ public class QuizManager : MonoBehaviour
     {
         QuizPanel.SetActive(false);
         GameOverPanel.SetActive(true);
-        scoreText.text = score + "/" + totalQuestions;
+        //scoreText.text = score + "/" + totalQuestions;
     }
 
     public void Correct()
     {
-        score += 1;
+        //score += 1;
         questionAndAnswers.RemoveAt(currentQuestion);
         StartCoroutine(WaitForNext());
     }
 
-    public void Wrong()
-    {
-        //questionAndAnswers.RemoveAt(currentQuestion);
-        //StartCoroutine(WaitForNext());
-    }
+    //public void Wrong()
+    //{
+    //    questionAndAnswers.RemoveAt(currentQuestion);
+    //    StartCoroutine(WaitForNext());
+    //}
 
     private IEnumerator WaitForNext()
     {
@@ -79,6 +81,7 @@ public class QuizManager : MonoBehaviour
         else
         {
             GameOver();
+            quizComplete = true;
         }
     }
 }

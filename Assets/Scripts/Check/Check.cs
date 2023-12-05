@@ -18,7 +18,7 @@ public class Check : MonoBehaviour
         {
             DoorOpen.bookInRightPlace = true;
 
-            Debug.Log("Door is open");
+            //Debug.Log("Door is open");
 
             Destroy(check1.GetComponent<CheckSocket1>());
             Destroy(check2.GetComponent<CheckSocket2>());
