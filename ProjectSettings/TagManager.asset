@@ -13,6 +13,7 @@ TagManager:
   - Socket2
   - Socket3
   - Socket4
+  - Audio
   layers:
   - Default
   - TransparentFX

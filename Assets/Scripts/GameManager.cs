@@ -7,6 +7,13 @@ public class GameManager : MonoBehaviour
     public GameObject doorAnimation;
     private bool doorIsOpen = false;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     private void Start()
     {
         foreach (GameObject gameObject in gameObjectsToDisable)
@@ -20,6 +27,8 @@ public class GameManager : MonoBehaviour
         if (DoorOpen.bookInRightPlace == true && QuizManager.quizComplete == true && doorIsOpen == false)
         {
             doorIsOpen = true;
+            Timer.exited = true;
+            audioManager.PlayDoorAudio(audioManager.door);
             doorAnimation.GetComponent<Animator>().Play("DoorOpen");
         }
     }

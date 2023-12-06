@@ -8,6 +8,13 @@ public class Answer : MonoBehaviour
 
     public Color startColor;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     //private void Start()
     //{
     //    startColor = GetComponent<Image>().color;
@@ -18,11 +25,13 @@ public class Answer : MonoBehaviour
         if (isCorrect)
         {
             GetComponent<Image>().color = Color.green;
+            audioManager.PlayQuizAudio(audioManager.correct);
             quizManager.Correct();
         }
         else
         {
             GetComponent<Image>().color = Color.red;
+            audioManager.PlayQuizAudio(audioManager.wrong);
             //quizManager.Wrong();
         }
     }
