@@ -11,6 +11,9 @@ public class Menu : MonoBehaviour
     public void StartMenu()
     {
         SceneManager.LoadScene(0);
+        DoorOpen.bookInRightPlace = false;
+        QuizManager.quizComplete = false;
+        GameManager.doorIsOpen = false;
     }
 
     private void OnTriggerEnter(Collider other)

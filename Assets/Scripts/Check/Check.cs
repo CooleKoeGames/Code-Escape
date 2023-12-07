@@ -16,6 +16,7 @@ public class Check : MonoBehaviour
     {
         if (checkBook1 && checkBook2 && checkBook3 && checkBook4)
         {
+            Debug.Log("book done");
             DoorOpen.bookInRightPlace = true;
 
             //Debug.Log("Door is open");

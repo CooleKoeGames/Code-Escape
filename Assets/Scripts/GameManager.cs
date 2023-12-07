@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] gameObjectsToDisable;
 
     public GameObject doorAnimation;
-    private bool doorIsOpen = false;
+    public static bool doorIsOpen = false;
 
     AudioManager audioManager;
 
@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     {
         if (DoorOpen.bookInRightPlace == true && QuizManager.quizComplete == true && doorIsOpen == false)
         {
+            Debug.Log("door open");
             doorIsOpen = true;
             Timer.exited = true;
             audioManager.PlayDoorAudio(audioManager.door);

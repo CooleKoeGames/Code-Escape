@@ -80,6 +80,7 @@ public class QuizManager : MonoBehaviour
         }
         else
         {
+            Debug.Log("quiz done");
             GameOver();
             quizComplete = true;
         }
