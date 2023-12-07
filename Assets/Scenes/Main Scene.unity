@@ -13157,6 +13157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1131463196}
+  - component: {fileID: 1131463197}
   m_Layer: 0
   m_Name: Laser Beam
   m_TagString: Untagged
@@ -13185,6 +13186,27 @@ Transform:
   - {fileID: 2036043151}
   m_Father: {fileID: 1245909994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1131463197
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131463195}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.1, y: 1.58, z: 2}
+  m_Center: {x: 0, y: -0.05, z: -1}
 --- !u!1001 &1131971808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14712,7 +14734,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1245909994}
-  - component: {fileID: 1245909995}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
@@ -14737,27 +14758,6 @@ Transform:
   - {fileID: 938682085}
   m_Father: {fileID: 1498100067}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1245909995
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245909993}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.1, y: 1.58, z: 2}
-  m_Center: {x: 0, y: 1.05, z: 0}
 --- !u!1 &1252049454
 GameObject:
   m_ObjectHideFlags: 0
@@ -16150,8 +16150,8 @@ Transform:
   m_GameObject: {fileID: 1465301747}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.053, y: 1.1419, z: 0.0003}
-  m_LocalScale: {x: 0.10954, y: 2.202398, z: 1.6156989}
+  m_LocalPosition: {x: -0.019, y: 1.051, z: 0.0003}
+  m_LocalScale: {x: 0.10954, y: 2.0871027, z: 1.3736672}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1498100067}
@@ -21541,6 +21541,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7843478404904849272, guid: 6693b532d5aaa9344a75dd3676d3852e,
+        type: 3}
+      propertyPath: m_text
+      value: Public
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
